@@ -1,0 +1,45 @@
+/* Page base styling */
+body {
+    font-family: sans-serif;
+    margin: 0;
+}
+
+/* Main container holding both columns */
+.container {
+    display: flex;
+    min-height: 100vh;
+    align-items: stretch;
+}
+
+/* Individual column styling */
+.column {
+    background: goldenrod;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+/* Image styling */
+.column img {
+    margin-top: 15px;
+}
+
+/* Buttons styling */
+button {
+    padding: 10px 20px;
+    margin: 10px 0;
+    /* spacing above/below button */
+    font-size: 16px;
+    border: 2px solid rgb(82, 83, 83);
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #333;
+}
