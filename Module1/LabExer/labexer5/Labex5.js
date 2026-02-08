@@ -13,3 +13,6 @@ carBrands.pop();
 
 //Print the array to the console.
 console.log(carBrands);
+
+
+//final version
