@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Online Shop</title>
+    <link rel="stylesheet" href="classExerOnlineShop.css">
+</head>
+
+<body>
+
+    <!--Header-->
+    <header class="header">
+        Simple Online Shop
+    </header>
+
+    <div class="container">
+        <!--Sidebar-->
+        <nav class="sidebar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+            </ul>
+        </nav>
+
+        <!--Main Content-->
+        <main class="content">
+
+            <!--Product section-->
+            <section class="product">
+                <h1 class="product-title">iPhone 17</h1>
+
+                <!--product image-->
+                <img src="iPhone-17-Colors.jpg" alt="iPhone 17">
+
+                <!--product description and price-->
+                <p class="product-description">
+                    Available in five gorgeous colors - black, lavender, mist blue, sage, and white -
+                    iPhone 17 has a beautiful, more durable design.
+                </p>
+                <p class="price">$2705</p>
+            </section>
+
+            <!--Shipping form-->
+            <section class="shipping">
+                <h2>Shipping Address</h2>
+
+                <form>
+                    <label>
+                        Full Name:
+                        <input type="text" required>
+                    </label>
+
+                    <label>
+                        Address:
+                        <input type="text" required>
+                    </label>
+
+                    <label>
+                        City:
+                        <input type="text" required>
+                    </label>
+
+                    <label>
+                        Postal Code:
+                        <input type="text" required>
+                    </label>
+                </form>
+
+                <!--Order button-->
+                <button onclick="orderNow()">Order Now</button>
+            </section>
+        </main>
+    </div>
+
+    <!--Footer-->
+    <footer class="footer">
+        © 2050 Simple Shop
+    </footer>
+
+    <!--JavaScript function-->
+    <script>
+        function orderNow() {
+            alert("Your order will be shipped soon.");
+        }
+    </script>
+
+</body>
+
+</html>
