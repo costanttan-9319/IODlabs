@@ -1,0 +1,7 @@
+Defining functions that will be needed using user scenerio:
+Scene 1: Player 1 wants to choose type of dice, either 6 face or 10 face. 
+Scene 2: Player 1 wants to click on the "Roll" button to roll the dice and get a random outcome either on a 6 face (outcome to be from 1-6) or 10 face (outcome to be from 1-10). And it will be displayed on screen.
+
+Storyboard of user using the system:
+Player 1 plays snake and ladder. Player 1 needs a 6 face dice to play. So player 1 click "Roll D6" to roll the dice. 
+The system will then generate a random number from 1-6 (whole number) and will be displayed on the screen. 
