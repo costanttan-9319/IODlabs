@@ -1,0 +1,95 @@
+/* I. Selectors */
+/* Put styles for questions 1.1, 1.2, 1.3 and 1.4 here */
+article {
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid black
+}
+
+.style-me1 {
+    color: red
+}
+
+#style-me2 {
+    color: blue;
+}
+
+.style-me1#style-me2 {
+    color: purple;
+}
+/* Put styles for questions 2.1 and 2.2 here */
+.my-descendants-are-styled p {
+    background-color: red;
+}
+
+.my-children-are-styled > p {
+    background-color: lightgreen;
+}
+
+/* II. Box model and common properties */
+/* Put styles for questions 1-8 here */
+.box {
+    background-color:rgb(120, 184, 239); /*set bg color*/
+    /* 4-value syntax basically up,right,down,left.*/
+    /* 2-value syntax is vertical and horizontal */
+    /* 1 value-syntax is all side */
+    margin: 20px;
+    padding: 50px;
+    /* practice width and height */
+    width: 200px !important;
+    height: 50px !important;
+    /*setting border*/
+    border: 10px solid black;
+    box-sizing: border-box;
+    overflow: auto;
+    outline: 10px solid rgb(229, 213, 94);
+    border-radius: 50%;
+    /* Add bg image */
+    background-image: url("./assets/images/img1.png");
+    background-position: center;
+}
+
+/* III. Positioning */
+/* Put styles for questions 1-3 here */
+.position-absolute {
+    position: absolute;
+    top: 0;
+    background-color: yellow;
+}
+
+.position-relative {
+    position: relative;
+    background-color: rgb(78, 156, 224);
+    /* Outside Relative means the element have no "home base" so the default is homepage. Set top: 0 = Top of the webpage
+       Within Relative is when the parent box is the "home base". Set top: 0 = Top of the parent box */
+       right: -200px;
+       /* the words tend to move away from the instructed direction */
+}
+
+.position-sticky {
+    position: sticky;
+    top: 0;
+    background-color: rgb(236, 62, 233);
+    top; 50px;
+}
+/* IV. Styling text */
+/* Put styles for questions 1-10 here */
+.text-style {
+    color: rgb(255, 0, 0); 
+    font-size: 13px;
+    line-height: 3;
+    font-weight: 900;
+    font-family: "SN Pro", sans-serif;
+    text-align: center;
+    letter-spacing: 2px;
+    word-spacing: 5px;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+/* V. Styling links */
+/* Put styles for questions 1-3 here */
+
+
+/* VI. calc() */
+/* Put styles for questions 1-3 here */
