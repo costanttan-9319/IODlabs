@@ -1,0 +1,133 @@
+<!--==Lab 1 html I==-->
+<!--==Lab 1 html II==-->
+
+<head>
+    <title>Lab exercise 2.1</title>
+    <meta charset="UTF-8">
+    <meta name=" description" content="lab exercise for 2.1">
+    <meta name="keywords">
+    <meta name="author">
+    <meta name="viewport">
+
+    <!--==Lab 1 html IV, step 4==-->
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+
+</head>
+
+<!--==Lab 1 html III==-->
+<!--Step 1-->
+
+<body>
+    <!--==Lab 1 html VII, Step 1==-->
+    <nav>
+        <a href="index.html">Home</a> | 
+        <a href="form.html">Registration Form</a>
+    </nav>
+
+    <h1>My HTML learning journey</h1> <!--Step 8, h1 tag-->
+    <article> <!--Step 7, wrap content into article bag-->
+        <h2>Learning elements - div, span, p, pre, ul, li, ol, article</h2> <!--Step 9, h2 tag-->
+        <div>fly</div>
+        <div>swim</div>
+        <div>drive</div>
+        <!--Step 2-->
+        <span>fly</span> <span>swim</span> <span>drive</span>
+        <!--Step 3-->
+        <p>
+            p represents paragraph without preserving spacing
+        </p>
+
+        <pre>
+    Text in          a pre element
+    is displayed in a fixed-width
+    font, and it preserves
+    both      spaces and
+    line breaks
+    </pre>
+        <!--Step 4-->
+        <ul>
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+            <li>item 4</li>
+        </ul>
+        <!--Step 5-->
+        <ol>
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>
+                <ul> <!--Step 6-->
+                    <li>item A</li>
+                    <li>item B</li>
+                </ul>
+            </li>
+        </ol>
+    </article>
+
+    <!--==Lab 1 html IV==-->
+    <!--Step 1-->
+    <article>
+        <h2>Table for reference mode of transportation</h2>
+
+        <!--Step 2-->
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="2">Type</th> <!--Step 7, add colspan-->
+                    <th>Speed</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>fly</td>
+                    <td>fast</td>
+                    <td>add on</td><!--Step 6-->
+                </tr>
+                <tr>
+                    <td>swim</td>
+                    <td>slow</td>
+                    <td rowspan="2">add on stretchhhhh</td> <!--Step 6--> <!--Step 8 rowspan-->
+                </tr>
+                <tr> <!--Step 3-->
+                    <td>drive</td>
+                    <td>medium</td>
+                    <td>extra</td> <!--Step 5-->
+                </tr>
+                <tr> <!--Step 8, add a row with 2 col-->
+                    <td>col 1</td>
+                    <td>col 2</td>
+                </tr>
+            </tbody>
+        </table>
+    </article>
+
+    <!--==Lab 1 html V==-->
+    <!--Step 1-->
+    <article>
+        <h2>Media Section</h2>
+
+        <!--Step 2-->
+        <img src="https://mainlymiles.com/wp-content/uploads/2022/05/SQ-B738-Takeoff-3-Planes-Portrait-Aviation-Media-2000x1200.jpg?crop=1"
+            alt="airplane" width="500">
+        <!--Step 3-->
+        <img src="html_lab_image.jpg" alt="Sunset or sunrise?" width="200">
+        <!--Step 4-->
+        <video autoplay controls width="250">
+            <source src="flower.webm" type="video/webm">
+            Sorry, your browser doesn't support embedded videos.
+        </video>
+        <!--Step 5-->
+        <audio autoplay controls src="t-rex-roar.mp3">
+            Your browser does not support the <code>audio</code> element.
+        </audio>
+
+        <!--Step 6, make it autoplay for vids and audio-->
+
+    </article>
+</body>

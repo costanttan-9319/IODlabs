@@ -1,0 +1,58 @@
+<!--==Lab 1 html VI==-->
+
+<body>
+    <nav>
+        <a href="index.html">Home</a> |
+        <a href="form.html">Registration Form</a>
+    </nav>
+    <!--Step 1-->
+    <form method="POST" action="http://127.0.0.1:5500/form.html">
+
+</body>
+<!--Step 2-->
+<div>
+    <label for="fname">First Name:</label>
+    <input type="text" id="fname" name="fname">
+</div>
+
+<div>
+    <label for="lname">Last Name:</label>
+    <input type="text" id="lname" name="lname">
+</div>
+<!--Step 3-->
+<div>
+    <p>What's you favorite coding language?</p>
+
+    <input type="radio" id="html" name="fav_language" value="HTML">
+    <label for="html">HTML</label>
+
+    <input type="radio" id="js" name="fav_language" value="JS">
+    <label for="js">JavaScript</label>
+
+    <input type="radio" id="css" name="fav_language" value="CSS">
+    <label for="css">CSS</label>
+</div>
+<!--Step 4-->
+<div>
+    <input type="checkbox" id="car" name="vehicle" value="car">
+    <label for="car">I own a car</label>
+
+    <input type="checkbox" id="bike" name="vehicle" value="bike">
+    <label for="bike">I own a bike</label>
+
+    <input type="checkbox" id="bicycle" name="vehicle" value="bicycle">
+    <label for="bicycle">I own a bicycle</label>
+</div>
+<!--Step 5-->
+<div>
+    <label for="car-brand">Choose a car brand:</label>
+    <select id="car-brand" name="car-brand">
+        <option value="toyota">Toyota</option>
+        <option value="mercedes">Mercedes</option>
+        <option value="byd">Byd</option>
+        <option value="bmw">BMW</option>
+    </select>
+</div>
+<!--Step 6-->
+<button type="submit">Submit form</button>
+</form>
