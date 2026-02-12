@@ -30,7 +30,7 @@ article {
 /* Put styles for questions 1-8 here */
 .box {
     background-color:rgb(120, 184, 239); /*set bg color*/
-    /* 4-value syntax basically up,right,down,left.*/
+    /* 4-value syntax basically top,right,bottom,left.*/
     /* 2-value syntax is vertical and horizontal */
     /* 1 value-syntax is all side */
     margin: 20px;
@@ -46,7 +46,17 @@ article {
     border-radius: 50%;
     /* Add bg image */
     background-image: url("./assets/images/img1.png");
-    background-position: center;
+    background-size: cover;
+     /* background-size: cover; image will fill to fit nicely
+        background-size: contain; image will scale into container but without any cropping
+        background-size: auto; keeps image as original ground size.*/
+    background-repeat: no-repeat; 
+    /* background-repeat: no-repeat; background image will not repeat to fill the big container
+    background-repeat: repeat; background image will repeat itself to fill up the big container 
+    background-repeat: repeat-x; or repeat-y , what happen is that image will repeat in the x or y axis*/
+    background-position: center; /*keeps the center of the picture in the center of the container*/
+    /* background-position: top; aligns the image to the top edge
+        background-position: bottom right; pushes the image to the bottom right corner */
 }
 
 /* III. Positioning */
@@ -75,21 +85,70 @@ article {
 /* IV. Styling text */
 /* Put styles for questions 1-10 here */
 .text-style {
-    color: rgb(255, 0, 0); 
-    font-size: 13px;
-    line-height: 3;
-    font-weight: 900;
+    color: rgb(255, 0, 0); /* Step 1 */
+    font-size: 13px;     /* Step 2 */
+    /* Sets the size of the text using pixels */
+    /* font-size: rem; will make the text double the size of the root font */
+    /* font-size: %; will make the text 1.5 times larger than its parent */
+    line-height: 3;      /* Step 3 */
+    /* Sets the space between lines */
+    /* line-height: px; sets a fixed pixel height for each line of text */
+    /* line-height: %; doubles the space between lines of text */
+    font-weight: 900;   /* Step 4 */
+    /* Uses a number to set thickness (100 is thin, 900 is extra bold) */
+    /* font-weight: bold; uses a keyword to make the text thicker */
+    /* font-weight: normal; the standard weight of the font */
+    /* 5.1  spotted a font i like called "SN Pro"*/
+    /* 5.2  i clicked get font and chose embed option followed by web option. */
     font-family: "SN Pro", sans-serif;
-    text-align: center;
-    letter-spacing: 2px;
-    word-spacing: 5px;
-    text-transform: uppercase;
-    text-decoration: underline;
+    text-align: center; /* will make the paragraph align to the center*/
+    /* text-align: left; will make the paragraph align to left*/
+    /* text-align: right; will make the paragraph align to right */
+    /* test-align: justify; this will make the sentences align in the way the left and right marigins are equal*/
+    letter-spacing: 1px;/* Increases or decreases space between individual characters */
+    /* letter-spacing: -1px; will make the letters squeeze together */
+    /* letter-spacing: 5px; will make letters wider apart from each other */
+    word-spacing: 2px; /*basically same concept as "letter-spcaing" its just that this time round is the "words" instead*/
+    text-transform: uppercase; /*makes all text capital letters eg: HI EVERYONE HOW ARE YOU*/
+    /* text-transform: lowercase; makes all text lowercase eg: hi everyone how are you*/
+    /* text-transform: capitalize; make the first letter of each word capital, Eg: Hi Everyone How Are You*/
+    text-decoration: underline; /*will underline text*/
+    /* text-decoration: line-through; will create a strikethrough line across the text. 
+       text-decoration: none; will not have any form of line with text.*/
 }
 
 /* V. Styling links */
 /* Put styles for questions 1-3 here */
+a, a:link {
+    color: rgb(120, 184, 239);   /* Sets the font color */
+    font-size: 40px;        /* Makes the size of link text slightly larger than standard text */
+    font-weight: 600;         /* Makes the link text semi-bold so it stands out */
+    text-decoration: none;    /* no striketrhough line or underline present to the text of the link*/
+}
 
+a:hover, a:active, a:focus {
+    color: rgb(60, 122, 177);
+    text-decoration: underline; 
+}
 
+a:visited {
+    color: rgb(2, 69, 137);
+    font-size: 40px;
+    font-style: italic; /* make words slanted, however due to broswer privacy system, there are limitations we can do on the fonts, mostly can only change color, bg and border color. */
+}
 /* VI. calc() */
 /* Put styles for questions 1-3 here */
+.calc-style {
+    width: calc(100vw - 100px); 
+    background-color:rgb(249, 20, 20);
+}
+
+.fixed-width-col {
+    width: 350px;
+    display: inline-block;
+}
+
+.fluid-col {
+    display: inline-block;
+    width: calc(100% - 355px);
+}
