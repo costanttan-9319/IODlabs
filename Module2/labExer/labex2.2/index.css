@@ -144,11 +144,12 @@ a:visited {
 }
 
 .fixed-width-col {
-    width: 350px;
     display: inline-block;
+    width: 350px;
+
 }
 
 .fluid-col {
     display: inline-block;
-    width: calc(100% - 355px);
+    width: calc(100% - 350px);
 }

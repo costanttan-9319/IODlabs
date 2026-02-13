@@ -43,20 +43,75 @@ a {
 /* ===Adding flexbox=== */
 .flex-container {
     display: flex;
+    flex-direction: row; /* ===Changing direction=== */
+    /* When I use 'column', the items stack. when i reverse for both column and row, the values' postion was swapped*/
 }
 
 .flex-item-1 {
     flex: 1;
 }
 
-.flex-item-1 {
+.flex-item-2 {
     flex: 2;
 }
 
-.flex-item-1 {
+.flex-item-3 {
     flex: 3;
 }
 
-.flex-item-1 {
+.flex-item-4 {
     flex: 4;
+}
+
+/* flex: 1 gets 10% of the space and 2 gets 20% and so on so forth. From "basic flexbox" i observed that the 4 different boxes have shown 1st taking the smallest space and 4th taking the largest space */
+
+/*===Centering flexbox=== */
+.flex-center {
+    justify-content: center;
+    align-items: center;
+       /* justify-content: flex-start;  -> Item stays at the left.
+      justify-content: flex-end;    -> Item moves to the right.
+      align-items: flex-start;      -> Item stays at the top.
+      align-items: flex-end;        -> Item moves to the bottom */
+}
+
+/*===Assigning leftover space===*/
+.flex-space-between {
+    justify-content: space-between
+}
+
+/* ===Wrapping items=== */
+.flex-wrap {
+    flex-wrap: wrap;
+    /* flex-wrap: wrap-reversed, the values 1,2,3,4 were swapped in positions  */
+}
+
+.flex-basis-item-50 {
+    flex-basis: 25%;
+    /* once changed the fill percentage, there will be enough space for the boxes to be in-line */
+}
+
+/* ===Flexbox for horizontal navigation=== */
+.flex-menu {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: rgb(87, 160, 143);
+    justify-content: center; 
+    /*justify-content: flex-end; makes it align to the right*/
+    /*justify-content: center; makes it align to the center */
+}
+
+.flex-menu li {
+    padding: 10px 20px;
+    border-right: 1px solid rgb(87, 160, 143);
+    /* ===expand menu items and center the links=== */
+    flex-grow: 1;
+    text-align: center;
+}
+
+/* ===move 4th item === */
+.flex-menu li:nth-child(4) {
+    order: 1;
 }
