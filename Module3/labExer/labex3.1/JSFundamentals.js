@@ -105,7 +105,7 @@ inigo.greeting(rugen);
 const basketballGame = {
   score: 0,
   fouls: 0, //Part c
-  
+
   freeThrow() {
     this.score++;
     return this; //part a
@@ -123,21 +123,20 @@ const basketballGame = {
 
   //part c
   foul() {
-    this.fouls++; 
-    return this;  
+    this.fouls++;
+    return this;
   },
 
-halfTime() {
+  halfTime() {
     console.log(`Halftime score is ${this.score} (${this.fouls} fouls)`);
     return this;
   },
 
-// part b New method to print the final score
+  // part b New method to print the final score
   fullTime() {
-   console.log(`Full time final score is ${this.score} (${this.fouls} fouls)`);
+    console.log(`Full time final score is ${this.score} (${this.fouls} fouls)`);
     return this;
-  }
-
+  },
 };
 
 //modify each of the above object methods to enable function chaining as below:
@@ -154,7 +153,6 @@ basketballGame
 //PART D
 // Above is test 1, it will print Halftime score is 9 (0 fouls), Full time final score is 9 (1 fouls)
 
-
 // Test 2
 // .basket()
 // .foul()
@@ -167,7 +165,7 @@ basketballGame
 // .fullTime();
 // Test 2 will print Halftime score is 9 (2 fouls) , Full time final score is 9 (3 fouls)
 
-//Test 3 
+//Test 3
 // .basket()
 // .foul()
 // .foul()
@@ -181,23 +179,21 @@ basketballGame
 // .fullTime();
 // Test 2 will print Halftime score is 9 (2 fouls) , Full time final score is 15 (3 fouls)
 
-
-
 // 8. The object below represents a single city.
 // a) Write a function that takes an object as an argument and uses a for...in loop to access and print to the console each of those object properties and their values. Test it using the sydney object below.
 
 const sydney = {
-name: 'Sydney',
-population: 5_121_000,
-state: 'NSW',
-founded: '26 January 1788',
-timezone: 'Australia/Sydney'
+  name: "Sydney",
+  population: 5_121_000,
+  state: "NSW",
+  founded: "26 January 1788",
+  timezone: "Australia/Sydney",
 };
 
 function printObjectProperties(obj) {
   for (let key in obj) {
     console.log(key + ": " + obj[key]);
-    }
+  }
 }
 
 printObjectProperties(sydney);
@@ -205,49 +201,123 @@ printObjectProperties(sydney);
 // b. Create a new object for a different city with different properties and call your function again with the new object.
 
 const singapore = {
-  name: 'Singapore',
+  name: "Singapore",
   population: 6_000_000,
-  state: 'Singapore',
-  founded: '9 August 1965',
-  timezone: 'Asia/Singapore',
+  state: "Singapore",
+  founded: "9 August 1965",
+  timezone: "Asia/Singapore",
 };
 
 function printObjectProperties(obj) {
   for (let key in obj) {
     console.log(key + ": " + obj[key]);
-    }
+  }
 }
 
 printObjectProperties(singapore);
 
-
-// 9. Use the following variables to understand how JavaScript stores objects by reference. 
+// 9. Use the following variables to understand how JavaScript stores objects by reference.
 //a) Create a new moreSports variable equal to teamSports and add some new sport values to it (using push and unshift)
 
-
-let teamSports = ['Hockey', 'Cricket', 'Volleyball'];
+let teamSports = ["Hockey", "Cricket", "Volleyball"];
 let moreSports = teamSports; //new container, moreSports
-moreSports.push('Basketball');
-
+moreSports.push("Basketball");
 
 console.log(teamSports);
 console.log(moreSports);
 
-
 // b) Create a new dog2 variable equal to dog1 and give it a new value
 
-let dog1 = 'Bingo';
+let dog1 = "Bingo";
 let dog2 = dog1;
-dog2 = 'Rex';
+dog2 = "Rex";
 
 console.log(dog1);
 console.log(dog2);
 
-
 //c) Create a new cat2 variable equal to cat1 and change its name property
 
-let cat1 = { name: 'Fluffy', breed: 'Siberian' };
+let cat1 = { name: "Fluffy", breed: "Siberian" };
 let cat2 = cat1;
-cat2.name = 'Luna';
-console.log(cat1.name); 
-console.log(cat2.name); 
+cat2.name = "Luna";
+console.log(cat1.name);
+console.log(cat2.name);
+
+//d) Print the original teamSports, dog1 and cat1 variables to the console. Have they changed? Why?
+
+console.log(teamSports);
+// printed ['Hockey', 'Cricket', 'Volleyball', 'Basketball'], so YES have changed because new container is eing created.
+
+console.log(dog1);
+// printed 'Bingo', so NO have not changed because let dog1 = 'Bingo'; is a string, no container is being created to make the change.
+
+console.log(cat1);
+// printed { name: 'Luna', breed: 'Siberian' }, so YES have changed because the let cat1 = { name: 'Fluffy', breed: 'Siberian' }; creates a container storing name and breed.
+
+// e) Change the way the moreSports and cat2 variables are created to ensure the originals remain independent
+// for sport
+//let teamSports = ['Hockey', 'Cricket', 'Volleyball'];
+
+// The [...] creates a independent array.
+//let moreSports = [...teamSports];
+
+//moreSports.push('Basketball');
+
+//console.log(teamSports);
+//console.log(moreSports);
+
+//for cat
+//let cat1 = { name: 'Fluffy', breed: 'Siberian' };
+
+//let cat2 = { ...cat1 };
+
+//cat2.name = 'Luna';
+
+//console.log(cat1.name);
+//console.log(cat2.name);
+
+//10. The following constructor function creates a new Person object with the given name and age values.
+// a) Create a new person using the constructor function and store it in a variable
+
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+  this.human = true;
+
+  this.canDrive = function () {
+    //added for the constructor function
+    return this.age >= 16;
+  };
+}
+
+const person1 = new Person("Leo", 28);
+const person2 = new Person("Sarah", 34); //part b
+
+console.log(person1);
+console.log(person2); // part b
+console.log(`${person1.name} can drive: ${person1.canDrive()}`); //part e
+
+//c) Print out the properties of each person object to the console
+//Person { name: 'Leo', age: 28, human: true }
+//Person { name: 'Sarah', age: 34, human: true }
+
+//d) Rewrite the constructor function as a class called PersonClass and use it to create a third person using different name and age values. Print it to the console as well.
+
+class PersonClass {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+    this.human = true;
+  }
+
+  canDrive() {  // part e
+    return this.age >= 16;
+  }
+}
+
+const person3 = new PersonClass("Charlie", 22);
+
+console.log("Person 3 (from Class):", person3);
+console.log(`${person3.name} can drive: ${person3.canDrive()}`); //part e
+
+
