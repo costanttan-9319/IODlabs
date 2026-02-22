@@ -32,9 +32,13 @@ console.log(truncate("This text will be truncated if it is too long", 25));
 
 // b) Write another variant of the truncate function that uses a conditional operator.
 
-//const truncate = (str, max) => (str.length > max) ? str.slice(0, max) + '...' : str;
+/* 
 
-//console.log(truncate('This text will be truncated if it is too long', 25));
+const truncate = (str, max) => (str.length > max) ? str.slice(0, max) + '...' : str;
+
+console.log(truncate('This text will be truncated if it is too long', 25)); 
+
+*/
 
 // 3. Use the following animals array for the below tasks. Test each one by printing the result to the console. Review the following link for tips: https://developer.mozilla.org/en- US/docs/Web/JavaScript/Reference/Global_Objects/Array
 // a) Add 2 new values to the end
