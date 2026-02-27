@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Exercise 4.2 | Simple Calculator</title>
+    <link rel="stylesheet" href="labex4.2.css">
+</head>
+<body>
+    <div class="calculator-card">
+        <input type="text" id="num1" placeholder="First number">
+
+        <div class="operator-row">
+            <button class="op-btn" data-op="+">+</button>
+            <button class="op-btn" data-op="-">−</button>
+            <button class="op-btn" data-op="*">X</button>
+            <button class="op-btn" data-op="/">÷</button>
+        </div>
+
+        <input type="text" id="num2" placeholder="Second number">
+
+        <div class="controls-row">
+            <button class="equal-btn" onclick="calculate()">=</button>
+            <button id="reset-btn" title="Reset">
+                <span class="reset-icon">↺</span>
+                <small>RESET</small>
+            </button>
+        </div>
+        
+
+        <div id="result-display" class="result-box" placeholder="Results">Results</div>
+    </div>
+
+    <script src="labex4.2.js"></script>
+</body>
+</html>

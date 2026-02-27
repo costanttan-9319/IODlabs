@@ -1,0 +1,117 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #fcfcfc;
+    font-family: Arial, sans-serif;
+}
+
+/* Outer border container from your image */
+.main-wrapper {
+    border: 1px solid black;
+    padding: 80px 60px;
+    background: white;
+}
+
+.calculator-card {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+    width: 320px;
+}
+
+/* Matching inputs and result container box */
+input, .result-container {
+    width: 100%;
+    height: 60px;
+    border: 4px solid black;
+    text-align: center;
+    font-size: 32px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input::placeholder, #result-display {
+    color: #000000;
+}
+
+/* Operator Buttons Row */
+.operator-row {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+    justify-content: center;
+}
+
+.op-btn {
+    width: 65px;
+    height: 65px;
+    background-color: #f3b03e; /* Exact orange from pic */
+    border: none;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Equal and Reset Row - UPDATED TO MATCH YOUR HTML */
+.controls-row {
+    display: flex;          /* Positions the Equal and Reset buttons side-by-side */
+    justify-content: center;/* Centers them horizontally */
+    align-items: center;    /* Keeps them perfectly aligned vertically */
+    gap: 12px;              /* Creates the space between them */
+    width: 100%;            /* Matches the width of your other rows */
+}
+
+/* Keep your button styles exactly as they are below that */
+.equal-btn {
+    width: 180px;
+    height: 65px;
+    background-color: #f3b03e;
+    border: none;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#reset-btn {
+    width: 65px;
+    height: 65px;
+    background: white;
+    border: 4px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.reset-icon-group {
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.result-box {
+      width: 100%;
+    height: 60px;
+    border: 4px solid black;
+    text-align: center;
+    font-size: 32px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Selection highlight */
+.op-btn.active {
+    outline: 4px solid black;
+    outline-offset: -4px;
+}
