@@ -6,6 +6,14 @@
  * 4. Reset the screen - Requirement D
  */
 
+/**
+ * Lab Exercise 4.2 - JavaScript Logic
+ * 1. Get data (two numbers) - Requirement A
+ * 2. Choose an operator - Requirement B
+ * 3. Get the result - Requirement C
+ * 4. Reset the screen - Requirement D
+ */
+
 // Variable to store the selected operation
 let selectedOperator = null;
 
@@ -73,6 +81,9 @@ function calculate() {
 
     // Update the display with the final result
     resultDisplay.innerText = result;
+    
+    // 👇 ADD THIS: Turn result text BLACK after calculation
+    resultDisplay.classList.add('result-shown');
 }
 
 // --- Requirement D: Reset the screen ---
@@ -82,7 +93,11 @@ resetButton.addEventListener('click', () => {
     num2Input.value = "";
     
     // Reset the display and variables
-    resultDisplay.innerText = "0";
+    resultDisplay.innerText = "Results";
+    
+    // 👇 ADD THIS: Turn result text back to GREY
+    resultDisplay.classList.remove('result-shown');
+    
     selectedOperator = null;
     
     // Clear visual button highlights

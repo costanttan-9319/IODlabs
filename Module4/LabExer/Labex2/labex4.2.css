@@ -24,20 +24,20 @@ body {
 }
 
 /* Matching inputs and result container box */
-input, .result-container {
+input {
     width: 100%;
     height: 60px;
     border: 4px solid black;
     text-align: center;
     font-size: 32px;
     box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    
+    /* Typed text = black */
+    color: black;
 }
 
-input::placeholder, #result-display {
-    color: #000000;
+input::placeholder {
+    color: #c7c4c4; /* Grey placeholder */
 }
 
 /* Operator Buttons Row */
@@ -58,16 +58,15 @@ input::placeholder, #result-display {
     cursor: pointer;
 }
 
-/* Equal and Reset Row - UPDATED TO MATCH YOUR HTML */
+/* Equal and Reset Row */
 .controls-row {
-    display: flex;          /* Positions the Equal and Reset buttons side-by-side */
-    justify-content: center;/* Centers them horizontally */
-    align-items: center;    /* Keeps them perfectly aligned vertically */
-    gap: 12px;              /* Creates the space between them */
-    width: 100%;            /* Matches the width of your other rows */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
 }
 
-/* Keep your button styles exactly as they are below that */
 .equal-btn {
     width: 180px;
     height: 65px;
@@ -98,8 +97,9 @@ input::placeholder, #result-display {
     line-height: 1;
 }
 
-.result-box {
-      width: 100%;
+/* Result Display - GREY by default */
+#result-display {
+    width: 100%;
     height: 60px;
     border: 4px solid black;
     text-align: center;
@@ -108,6 +108,15 @@ input::placeholder, #result-display {
     display: flex;
     align-items: center;
     justify-content: center;
+    
+    /* Default = grey */
+    color: #c7c4c4;
+    transition: color 0.2s ease;
+}
+
+/* This class makes result BLACK after calculation */
+.result-shown {
+    color: black !important;
 }
 
 /* Selection highlight */
