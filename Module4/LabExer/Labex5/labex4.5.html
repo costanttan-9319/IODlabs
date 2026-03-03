@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Lab 5: Manage Data 2</title>
+</head>
+<body class="bg-light">
+
+    <div class="container mt-4">
+        <h1>Latest News Portal</h1>
+
+        <div class="card p-4 mb-4 shadow-sm">
+            <h5>Add New Article</h5>
+            <div class="mb-3">
+                <input type="text" id="news-title-input" class="form-control" placeholder="News Title">
+            </div>
+            <div class="mb-3">
+                <textarea id="news-content-input" class="form-control" placeholder="News Content"></textarea>
+            </div>
+            <div class="d-flex gap-2">
+                <button onclick="addNewsItem()" class="btn btn-primary">Submit News</button>
+                <button onclick="stopAutoRefresh()" class="btn btn-danger">Stop Auto-Refresh</button>
+            </div>
+        </div>
+
+        <div id="news-list" class="row"></div>
+    </div>
+
+    <template id="news-template">
+        <div class="col-md-4 mb-3">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title text-primary"></h5>
+                    <p class="card-text"></p>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <script>
+        // 1. Initial News Array
+        let news = [
+            { id: 1, title: 'Election Results', content: "Newly elected minister..." },
+            { id: 2, title: 'Sporting Success', content: "World Cup winners..." }
+        ];
+
+        // 2. Logic to add a new item manually (The "No-Form" Way)
+        function addNewsItem() {
+            const titleInput = document.getElementById('news-title-input');
+            const contentInput = document.getElementById('news-content-input');
+
+            // Verification check
+            if (titleInput.value.trim() === "" || contentInput.value.trim() === "") {
+                alert("Please fill in both fields!");
+                return;
+            }
+
+            // Push the new object into the array
+            news.push({
+                id: news.length + 1,
+                title: titleInput.value,
+                content: contentInput.value
+            });
+
+            // Clear inputs so the user can type the next news item
+            titleInput.value = '';
+            contentInput.value = '';
+            
+            console.log("Item added to array. Sync will happen in the next interval.");
+        }
+
+        // 3. Logic to clone the template and show the data
+        function addNewsCard(item) {
+            const template = document.getElementById("news-template").content.cloneNode(true);
+            template.querySelector('.card-title').innerText = item.title;
+            template.querySelector('.card-text').innerText = item.content;
+            document.querySelector('#news-list').appendChild(template);
+        }
+
+        // 4. The Sync Loop
+        function refreshNews() {
+            // "Remove all news elements"
+            document.querySelector('#news-list').innerHTML = '';
+            
+            // "Fill it in with the latest news" from the current array
+            news.forEach(item => addNewsCard(item));
+            console.log("UI updated with current array data.");
+        }
+
+        // Start the 5-second interval
+        let refreshInterval = setInterval(refreshNews, 5000);
+
+        // Extension: Stop the interval
+        function stopAutoRefresh() {
+            clearInterval(refreshInterval);
+            alert("Auto-refresh stopped.");
+        }
+
+        // Run once on page load
+        refreshNews();
+    </script>
+</body>
+</html>
