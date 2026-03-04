@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 8: Luxon Dates</title>
+    <script src="https://cdn.jsdelivr.net/npm/luxon@3.4.4/build/global/luxon.min.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; line-height: 1.6; }
+        .task { border-bottom: 1px solid #ccc; padding: 10px 0; }
+        span { font-weight: bold; color: #937c33; }
+    </style>
+</head>
+<body>
+
+    <h1>Luxon Lab Exercises</h1>
+
+    <div class="task" id="p1"></div>
+    <div class="task" id="p2"></div>
+    <div class="task" id="p3"></div>
+    <div class="task" id="p4"></div>
+    <div class="task" id="p5"></div>
+
+    <script>
+        const DateTime = luxon.DateTime;
+        const today = DateTime.now(); // Local Singapore Time
+
+        // Days between my birth date and current date 
+        const myBirthdate = DateTime.fromISO("1996-08-27"); 
+        const diffDays = today.diff(myBirthdate, 'days').days;
+        document.getElementById('p1').innerHTML = `1) Days since birth: <span>${Math.floor(diffDays)} days</span>`;
+
+
+        // Years, months, and days between birthdate and current date 
+        const diffComplex = today.diff(myBirthdate, ['years', 'months', 'days']).toObject();
+        document.getElementById('p2').innerHTML = `2) Precise age: <span>${diffComplex.years} years, ${diffComplex.months} months, and ${Math.floor(diffComplex.days)} days</span>`;
+
+
+        // Given two dates, display the date closest to the current date 
+        // Using Mar 4 (tomorrow) and Christmas Dec 25as our test dates
+        const dateA = DateTime.fromISO("2026-03-04"); 
+        const dateB = DateTime.fromISO("2026-12-25");
+        
+        const distA = Math.abs(today.diff(dateA).milliseconds);
+        const distB = Math.abs(today.diff(dateB).milliseconds);
+        const closest = distA < distB ? dateA : dateB;
+
+        document.getElementById('p3').innerHTML = `3) Closest date to today: <span>${closest.toISODate()}</span>`;
+
+
+        // Show which date comes before (first) and after (second)
+        const first = DateTime.fromISO("2027-01-01");
+        const second = DateTime.fromISO("2026-01-01");
+        const sequence = first < second ? "before" : "after";
+
+        document.getElementById('p4').innerHTML = `4) Comparison: ${first.toISODate()} is <span>${sequence}</span> ${second.toISODate()}`;
+
+
+        // Display the current time in London
+        const london = DateTime.now().setZone("Europe/London").toLocaleString(DateTime.TIME_SIMPLE);
+        document.getElementById('p5').innerHTML = `5) Current time in London: <span>${london}</span>`;
+
+    </script>
+</body>
+</html>

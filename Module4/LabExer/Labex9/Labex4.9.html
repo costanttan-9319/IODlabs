@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eCharts - Fake Store API</title>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.1/dist/echarts.min.js"></script>
+</head>
+
+<body>
+    <div id="main" style="width: 900px; height: 600px; margin: auto;"></div>
+
+    <script type="text/javascript">
+        // 1. Initialize phase
+        let myChart = echarts.init(document.getElementById('main'));
+
+        let options = {
+            title: { 
+                text: 'Fake Store Categories',
+                left: 'center' 
+            },
+            tooltip: {}, // Adds detail hovering effect to see values and details
+            xAxis: {
+                data: [], // Starts empty, filled by updateChart
+                axisLabel: { interval: 0, rotate: 15 } // Rotates labels if they are long
+            },
+            yAxis: {},
+            series: [{
+                name: '# products',
+                type: 'bar',
+                data: [], 
+                itemStyle: { color: '#5470c6' }
+            }]
+        };
+
+        //Fetch the data from the API
+        fetch('https://fakestoreapi.com/products')
+            .then((response) => response.json())
+            .then((json) => {
+                console.log("Data fetched:", json);
+                
+                updateChart(json);
+
+                myChart.setOption(options);
+            })
+            .catch(error => console.error('Error fetching data:', error));
+
+        // create function to update chart
+        function updateChart(products) {
+            //Map to store datas
+            const categoriesMap = new Map();
+
+            products.forEach(product => {
+                let category = product.category;
+                if (categoriesMap.has(category)) {
+                    // This is setting up the number y axis data, since the data shows single digits, we use + 1
+                    categoriesMap.set(category, categoriesMap.get(category) + 1);
+                } else {
+                    // If new category, initialize with 1
+                    categoriesMap.set(category, 1);
+                }
+            });
+
+            // array for x axis
+            options.xAxis.data = [...categoriesMap.keys()];
+
+            // array for the y axis (computer already knows that it is numbers so it uses series instead to mark points. Series[0] being first item , series [1] being the second and etc. )
+            options.series[0].data = [...categoriesMap.values()];
+            
+            console.log("Categories found:", options.xAxis.data);
+            console.log("Counts per category:", options.series[0].data);
+        }
+    </script>
+</body>
+
+</html>

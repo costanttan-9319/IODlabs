@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab #7: CSS Animation</title>
+    <style>
+        /* Container size for the square to move */
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Start at the top */
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        /* Style the square */
+        .square {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: relative; /* Needed to use the 'top' property */
+            
+            /* Animation */
+            animation-name: slideAndChange;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate; /* Makes it return to original position */
+            animation-timing-function: ease-in-out;
+        }
+
+        /* construct the animation logic */
+        @keyframes slideAndChange {
+            from {
+                top: 150px;
+                background-color: rgb(255, 0, 170);
+            }
+            to {
+                top: 500px; /* Moves it down */
+                background-color: rgb(27, 167, 214); /* Changes color */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="square"></div>
+
+</body>
+</html>
