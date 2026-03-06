@@ -1,0 +1,201 @@
+/*==========FOR MAIN ============*/
+/*For the design layout 3-stripes*/
+.container {
+  max-width: 960px;
+}
+
+.product-device {
+  position: absolute;
+  right: -50px;
+  bottom: -5%;
+  width: 200px;
+  height: 540px;
+  background-color: #333;
+  border-radius: 21px;
+  transform: rotate(30deg);
+  animation: moveRightOut 4s ease-in-out infinite alternate;
+}
+
+.product-device-2 {
+  top: -25%;
+  right: auto;
+  left: 5%;
+  background-color: #333;
+}
+
+.flex-equal>* {
+  flex: 1;
+}
+
+@media (min-width: 768px) {
+  .flex-md-equal>* {
+    flex: 1;
+  }
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.product-device-3 {
+  top: -93%;
+  right: auto;
+  left: 58%;
+  background-color: #333;
+}
+
+.flex-equal>* {
+  flex: 1;
+}
+
+@media (min-width: 768px) {
+  .flex-md-equal>* {
+    flex: 1;
+  }
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.product-device-4 {
+  top: 87%;
+  right: auto;
+  left: 26%;
+  background-color: #333;
+}
+
+.flex-equal>* {
+  flex: 1;
+}
+
+@media (min-width: 768px) {
+  .flex-md-equal>* {
+    flex: 1;
+  }
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+
+/*For animation*/
+/* --- ADD THESE AT THE VERY BOTTOM OF YOUR CSS FILE --- */
+
+@keyframes moveRightOut {
+  from {
+    transform: rotate(30deg) translate(0, 0);
+  }
+
+  to {
+    /* Moves it Right and Down */
+    transform: rotate(30deg) translate(80px, 80px);
+  }
+}
+
+
+
+
+/*=========Shoe page heading========*/
+.subShoe-heading {
+  font-size: 150px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  color: rgb(14, 14, 14) !important;
+}
+
+
+
+/*==========FOR HEADINGS ============*/
+
+/*HEADING*/
+.jumbotron-heading {
+  font-size: 130px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  color: rgb(14, 14, 14) !important;
+}
+
+/*heading for sizes*/
+.h3heading {
+  font-size: 23px;
+}
+
+/*for the button gazelle*/
+
+a:visited {
+  color: inherit;
+}
+
+/*For the size selection*/
+.size-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* 4 buttons per row */
+  gap: 8px;
+  margin: 15px 0;
+}
+
+.size-btn {
+  background-color: #f0f0f0;
+  border: none;
+  padding: 10px 5px;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
+}
+
+/*=========Drop down menu=======*/
+/* Style the main box of the dropdown */
+.dropdown-menu {
+  background-color: #ffffff;
+  border-radius: 8px;
+  /* Smooth corners */
+  padding: 10px 0;
+  min-width: 180px;
+  /* This ensures it stays on top of your shoe cards */
+  z-index: 1050;
+}
+
+/* Style the individual items (Men, Women, Kids) */
+.dropdown-item {
+  padding: 10px 20px;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  /* Makes hover feel smooth */
+}
+
+/* What happens when you hover over an item */
+.dropdown-item:hover {
+  background-color: #333333;
+  /* Dark background like your button */
+  color: white !important;
+}
+
+/* Fix for your "visited" links so they don't turn purple inside the menu */
+.dropdown-item:visited {
+  color: inherit;
+}
+
+/* Style the divider line */
+.dropdown-divider {
+  border-top: 1px solid #eeeeee;
+  margin: 8px 0;
+}
+
+/*For chart guide*/
+.size-guide-chart-container {
+  display: flex;
+  flex-direction: row;
+}
+
+/*=======ABOUT PAGE=========*/
+video {
+    margin-top: 1px;     /* Move down from the top */
+    margin-bottom: 50px;  /* Space at the bottom */
+    margin-left: 1px;   /* Push from the left */
+    margin-right: auto;   /* Used for centering */
+}

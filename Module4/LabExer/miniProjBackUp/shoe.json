@@ -1,0 +1,17 @@
+{
+  "men": [
+    { "name": "Gazelle", "price": 80, "cat": "men", "page": "men.html" },
+    { "name": "Stan Smith", "price": 159, "cat": "men", "page": "men.html" },
+    { "name": "Superstar Boot Luxe TC", "price": 174, "cat": "men", "page": "men.html" }
+  ],
+  "women": [
+    { "name": "SAMBA", "price": 159, "cat": "women", "page": "women.html" },
+    { "name": "Campus slide", "price": 59, "cat": "women", "page": "women.html" },
+    { "name": "Handball Spezial Shoe", "price": null, "cat": "women", "page": "women.html" }
+  ],
+  "kids": [
+    { "name": "SAMBA OG", "price": 99, "cat": "kids", "page": "kids.html" },
+    { "name": "Adifom 70s", "price": 59, "cat": "kids", "page": "kids.html" },
+    { "name": "Altaswim 3", "price": 40, "cat": "kids", "page": "kids.html" }
+  ]
+}

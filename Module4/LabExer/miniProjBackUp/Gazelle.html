@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Branded Brands - Singapore's Premium Footwear Destination">
+    <meta name="author" content="Costant">
+    <title>Adidaz | Shop Shoes (Costant Mini Project)</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-light bg-white border-bottom shadow-sm">
+        <div class="container-fluid d-flex flex-column flex-md-row justify-content-between">
+            <a class="px-8 py-2 d-none d-md-inline-block font-weight-bold text-dark text-decoration-none"
+                href="main.html"><big>Adidaz</big></a>
+
+            <div class="d-flex ml-md-auto align-items-center">
+                <div class="input-group input-group-sm mr-3" style="width: 200px;">
+                    <input type="text" id="shoe-search" class="form-control bg-light border-0"
+                        placeholder="Search..." />
+                    <button onclick="handleSearchClick()" class="btn btn-dark">Search</button>
+                </div>
+                <a class="py-2 px-3 d-none d-md-inline-block text-dark" href="about.html">About</a>
+
+                <div class="dropdown">
+                    <a class="py-2 px-3 text-dark dropdown-toggle text-decoration-none" href="#" id="categoryDropdown"
+                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Categories
+
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right shadow border-0" aria-labelledby="categoryDropdown">
+                        <a class="dropdown-item" href="men.html" onclick="filterCategory('men')">Men</a>
+                        <a class="dropdown-item" href="women.html" onclick="filterCategory('women')">Women</a>
+                        <a class="dropdown-item" href="kids.html" onclick="filterCategory('kids')">Kids</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item font-weight-bold" href="allShoes.html"
+                            onclick="filterCategory('all')">All Collections</a>
+                    </div>
+                </div>
+                <a class="py-2 px-3 d-none d-md-inline-block text-dark" href="cart.html">Cart (<span
+                        id="cart-count">0</span>)</a>
+            </div>
+        </div>
+        </div>
+    </nav>
+
+
+    <main role="main">
+
+        <section class="jumbotron text-center">
+            <div class="container">
+                <h1 class="subShoe-heading">Gazelle</h1>
+                <p>MEN</p>
+
+            </div>
+        </section>
+
+        <section>
+            <div class="container mt-5">
+
+                <div class="row g-5" style="row-gap: 60px !important;">
+                    <div class="col-12 col-md-6 col-lg-6" style="padding: 0 50px !important;">
+                        <div class="card h-100">
+                            <img src="/Module4/LabExer/MiniProject/men/Gazelle/Gazelle_Shoes_Black_.avif"
+                                class="card-img-top" alt="Placeholder">
+                            <div class="card-body">
+                                <h2>Gazelle (Black)</h2>
+                                <p class="card-text"><strong>$80</strong> <br> <br>
+                                </p>
+
+                                <div class="size-selection">
+
+                                    <h3 class="h3heading">Sizes</h3>
+                                    <div class="size-grid">
+                                        <button type="button" class="size-btn">3.5 UK</button>
+                                        <button type="button" class="size-btn">4 UK</button>
+                                        <button type="button" class="size-btn">4.5 UK</button>
+                                        <button type="button" class="size-btn">5 UK</button>
+                                        <button type="button" class="size-btn">5.5 UK</button>
+                                        <button type="button" class="size-btn">6 UK</button>
+                                        <button type="button" class="size-btn">6.5 UK</button>
+                                        <button type="button" class="size-btn">7 UK</button>
+                                        <button type="button" class="size-btn">7.5 UK</button>
+                                        <button type="button" class="size-btn">8 UK</button>
+                                        <button type="button" class="size-btn">8.5 UK</button>
+                                        <button type="button" class="size-btn">9 UK</button>
+                                        <button type="button" class="size-btn">9.5 UK</button>
+                                        <button type="button" class="size-btn">10 UK</button>
+                                        <button type="button" class="size-btn">10.5 UK</button>
+                                        <button type="button" class="size-btn">11 UK</button>
+                                        <button type="button" class="size-btn">11.5 UK</button>
+                                        <button type="button" class="size-btn">12 UK</button>
+                                        <button type="button" class="size-btn">12.5 UK</button>
+                                    </div>
+
+                                    <p><u><a href="sizeGuide.html" target="_blank">see size guide</a></u></p>
+                                </div>
+                                <br> <br>
+
+                                <button class="btn btn-dark"><a href="">Add to cart</a></button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-12 col-md-6 col-lg-6" style="padding: 0 50px !important;">
+                        <div class="card h-100">
+                            <img src="/Module4/LabExer/MiniProject/men/Gazelle/Gazelle_Shoes_White.avif"
+                                class="card-img-top" alt="Placeholder">
+                            <div class="card-body">
+                                <h2>Gazelle (White)</h2>
+                                <p class="card-text"><strong>$80</strong> <br> <br>
+                                </p>
+
+                                <div class="size-selection">
+
+                                    <h3 class="h3heading">Sizes</h3>
+                                    <div class="size-grid">
+                                        <button type="button" class="size-btn">3.5 UK</button>
+                                        <button type="button" class="size-btn">4 UK</button>
+                                        <button type="button" class="size-btn">4.5 UK</button>
+                                        <button type="button" class="size-btn">5 UK</button>
+                                        <button type="button" class="size-btn">5.5 UK</button>
+                                        <button type="button" class="size-btn">6 UK</button>
+                                        <button type="button" class="size-btn">6.5 UK</button>
+                                        <button type="button" class="size-btn">7 UK</button>
+                                        <button type="button" class="size-btn">7.5 UK</button>
+                                        <button type="button" class="size-btn">8 UK</button>
+                                        <button type="button" class="size-btn">8.5 UK</button>
+                                        <button type="button" class="size-btn">9 UK</button>
+                                        <button type="button" class="size-btn">9.5 UK</button>
+                                        <button type="button" class="size-btn">10 UK</button>
+                                        <button type="button" class="size-btn">10.5 UK</button>
+                                        <button type="button" class="size-btn">11 UK</button>
+                                        <button type="button" class="size-btn">11.5 UK</button>
+                                        <button type="button" class="size-btn">12 UK</button>
+                                        <button type="button" class="size-btn">12.5 UK</button>
+                                    </div>
+
+                                    <p><u><a href="sizeGuide.html" target="_blank">see size guide</a></u></p>
+                                </div>
+                                <br> <br>
+
+                                <button class="btn btn-dark"><a href="">Add to cart</a></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-6" style="padding: 0 50px !important;">
+                        <div class="card h-100">
+                            <img src="/Module4/LabExer/MiniProject/men/Gazelle/Gazelle_Shoes_Blue.avif"
+                                class="card-img-top" alt="Placeholder">
+                            <div class="card-body">
+                                <h2>Gazelle (Blue)</h2>
+                                <p class="card-text"><strong>$80</strong> <br> <br>
+                                </p>
+
+                                <div class="size-selection">
+
+                                    <h3 class="h3heading">Sizes</h3>
+                                    <div class="size-grid">
+                                        <button type="button" class="size-btn">3.5 UK</button>
+                                        <button type="button" class="size-btn">4 UK</button>
+                                        <button type="button" class="size-btn">4.5 UK</button>
+                                        <button type="button" class="size-btn">5 UK</button>
+                                        <button type="button" class="size-btn">5.5 UK</button>
+                                        <button type="button" class="size-btn">6 UK</button>
+                                        <button type="button" class="size-btn">6.5 UK</button>
+                                        <button type="button" class="size-btn">7 UK</button>
+                                        <button type="button" class="size-btn">7.5 UK</button>
+                                        <button type="button" class="size-btn">8 UK</button>
+                                        <button type="button" class="size-btn">8.5 UK</button>
+                                        <button type="button" class="size-btn">9 UK</button>
+                                        <button type="button" class="size-btn">9.5 UK</button>
+                                        <button type="button" class="size-btn">10 UK</button>
+                                        <button type="button" class="size-btn">10.5 UK</button>
+                                        <button type="button" class="size-btn">11 UK</button>
+                                        <button type="button" class="size-btn">11.5 UK</button>
+                                        <button type="button" class="size-btn">12 UK</button>
+                                        <button type="button" class="size-btn">12.5 UK</button>
+                                    </div>
+
+                                    <p><u><a href="sizeGuide.html" target="_blank">see size guide</a></u></p>
+                                </div>
+                                <br> <br>
+
+                                <button class="btn btn-dark"><a href="">Add to cart</a></button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+        <div id="shoe-section" class="container my-5">
+            <div class="row" id="shoe-display">
+            </div>
+        </div>
+
+
+
+        <footer class="container py-5">
+            <div class="row">
+                <div class="col-12 col-md">
+                    <small class="d-block mb-3 text-muted">© 2026 Adidaz - Singapore</small>
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
+        <script src="shoe.js"></script>
+</body>
+
+</html>
