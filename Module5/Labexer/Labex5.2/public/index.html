@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Exercise 5.2 | Simple Calculator</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="calculator-card">
+        <input type="text" id="num1" placeholder="First number">
+
+<div class="operator-row">
+            <button type="button" class="op-btn" onclick="setOp('add')">+</button>
+            <button type="button" class="op-btn" onclick="setOp('subtract')">−</button>
+            <button type="button" class="op-btn" onclick="setOp('multiply')">X</button>
+            <button type="button" class="op-btn" onclick="setOp('divide')">÷</button>
+        </div>
+
+        <input type="text" id="num2" placeholder="Second number">
+
+        <div class="controls-row">
+            <button class="equal-btn" onclick="runcalculation()">=</button>
+            <button id="reset-btn" title="Reset">
+                <span class="reset-icon">↺</span>
+                <small>RESET</small>
+            </button>
+        </div>
+        
+
+        <div id="result-display" class="result-box" >Resutls</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

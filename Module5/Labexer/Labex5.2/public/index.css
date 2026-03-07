@@ -1,0 +1,152 @@
+/* 1. Global Reset & Centering */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #fcfcfc;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* 2. Outer Border Container (The "Frame") */
+.main-wrapper {
+    border: 1px solid black;
+    padding: 60px 40px;
+    background: white;
+    box-shadow: 10px 10px 0px rgba(0,0,0,0.05); /* Subtle shadow for depth */
+}
+
+/* 3. The Calculator Card Layout */
+.calculator-card {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+    width: 320px;
+}
+
+/* 4. Inputs & Result Box (Matching Styles) */
+input, #result-display {
+    width: 100%;
+    height: 65px;
+    border: 4px solid black;
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+/* Placeholder color (Grey) */
+input::placeholder {
+    color: #c7c4c4;
+}
+
+/* Result Box Specifics */
+#result-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #c7c4c4; /* Default grey until calculated */
+    transition: all 0.2s ease;
+}
+
+/* Class to trigger when a result arrives (Turn text Black) */
+#result-display.result-shown {
+    color: black !important;
+}
+
+/* 5. Operator Row (+ - X /) */
+.operator-row {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+    justify-content: center;
+}
+
+.op-btn {
+    width: 65px;
+    height: 65px;
+    background-color: #f3b03e; /* The specific Orange */
+    border: none;
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+/* Selection Highlight (When active) */
+.op-btn.active {
+    outline: 4px solid black;
+    outline-offset: -4px;
+}
+
+/* 6. Controls Row (= and Reset) */
+.controls-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+}
+
+.equal-btn {
+    width: 180px;
+    height: 65px;
+    background-color: #f3b03e;
+    border: none;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#reset-btn {
+    width: 65px;
+    height: 65px;
+    background: white;
+    border: 4px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+/* Reset Icon/Text Styling */
+.reset-icon-group {
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 1.1;
+    text-align: center;
+}
+
+.reset-icon-group span:first-child {
+    font-size: 18px;
+    margin-bottom: 2px;
+}
+
+/* 7. Hover & Active Effects (Tactile feel) */
+.op-btn:hover, .equal-btn:hover {
+    background-color: #e6a030;
+}
+
+.op-btn:active, .equal-btn:active {
+    transform: scale(0.95);
+}
+
+#reset-btn:hover {
+    background-color: #f0f0f0;
+}
+
+/* Remove default number input arrows for a cleaner look */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
