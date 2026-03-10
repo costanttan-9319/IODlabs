@@ -42,7 +42,7 @@ function runcalculation() {
     }
 
     // Hits your Node.js server on Port 3888
-    const url = `/calculator/${currentOp}?num1=${val1}&num2=${val2}`;
+    const url = `http://localhost:3888/calculator/${currentOp}?num1=${val1}&num2=${val2}`;
     
     console.log("Fetching from:", url);
 

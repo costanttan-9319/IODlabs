@@ -1,7 +1,10 @@
 const express = require('express');
 const path = require('path');
+const cors = require('cors');
 const app = express();
 const port = 3888;
+
+app.use(cors());
 
 // 1. Import your math logic
 const calculatorRoutes = require('./routes/calculatorRoutes');
