@@ -1,0 +1,28 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Costant's Fake Store API",
+    "version": "1.0.0",
+    "description": "A back-end proxy server that fetches data from the Fake Store API using Axios."
+  },
+  "paths": {
+    "/products": {
+      "get": {
+        "summary": "Retrieve all products",
+        "description": "Fetches a full list of products from the third-party eCommerce API.",
+        "responses": {
+          "200": {
+            "description": "A successful list of products",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
