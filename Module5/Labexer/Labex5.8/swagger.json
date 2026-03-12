@@ -1,0 +1,50 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Costant's Calculator API",
+    "version": "1.0.0",
+    "description": "A professional Calculator API using OOP and Swagger Documentation."
+  },
+  "paths": {
+    "/calculator/add": {
+      "get": {
+        "summary": "Addition",
+        "parameters": [
+          { "name": "num1", "in": "query", "required": true, "schema": { "type": "integer" } },
+          { "name": "num2", "in": "query", "required": true, "schema": { "type": "integer" } }
+        ],
+        "responses": { "200": { "description": "Returns the sum" } }
+      }
+    },
+    "/calculator/subtract": {
+      "get": {
+        "summary": "Subtraction",
+        "parameters": [
+          { "name": "num1", "in": "query", "required": true, "schema": { "type": "integer" } },
+          { "name": "num2", "in": "query", "required": true, "schema": { "type": "integer" } }
+        ],
+        "responses": { "200": { "description": "Returns the difference" } }
+      }
+    },
+    "/calculator/multiply": {
+      "get": {
+        "summary": "Multiplication",
+        "parameters": [
+          { "name": "num1", "in": "query", "required": true, "schema": { "type": "integer" } },
+          { "name": "num2", "in": "query", "required": true, "schema": { "type": "integer" } }
+        ],
+        "responses": { "200": { "description": "Returns the product" } }
+      }
+    },
+    "/calculator/divide": {
+      "get": {
+        "summary": "Division",
+        "parameters": [
+          { "name": "num1", "in": "query", "required": true, "schema": { "type": "integer" } },
+          { "name": "num2", "in": "query", "required": true, "schema": { "type": "integer" } }
+        ],
+        "responses": { "200": { "description": "Returns the quotient or error message" } }
+      }
+    }
+  }
+}

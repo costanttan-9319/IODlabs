@@ -13,7 +13,6 @@ describe('Calculator API Unit Tests', () => {
             });
     });
 
-    // NEW: Subtraction Test
     test('GET /calculator/subtract => 20 - 5 should equal 15', () => {
         return request(app)
             .get('/calculator/subtract?num1=20&num2=5')
