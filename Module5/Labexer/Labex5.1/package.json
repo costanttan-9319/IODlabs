@@ -7,6 +7,7 @@
   "type": "commonjs",
   "main": "server1.js",
   "scripts": {
+    "start": "node 5.1server1.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
