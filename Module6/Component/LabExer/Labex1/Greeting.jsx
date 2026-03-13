@@ -3,7 +3,6 @@ function Greeting({ name, children }) {
   return (
     <div className="greeting-container">
       {/* LOGIC: If name exists, use it. Otherwise, default to "World".
-        We use a ternary operator here.
       */}
       <h1>Hello {name ? name : "World"}</h1>
 
