@@ -1,6 +1,8 @@
+import { useState } from 'react';
 import SingleCat from './SingleCat';
+import AddCatForm from './AddCatForm'; //Exercise 5
 
-const cats = [
+const initialCats = [
   { id: 1, name: 'Cheetah', latinName: 'Acinonyx jubatus', image: 'https://thomsonsafaris.com/wp-content/uploads/2012/12/cheetah-running-turn_1758173843.jpg' },
   { id: 2, name: 'Cougar', latinName: 'Puma concolor', image: 'https://www.cattales.org/wp-content/uploads/sites/499/2025/10/Hope-8x10-1-edited.jpg' },
   { id: 3, name: 'Jaguar', latinName: 'Panthera onca', image: 'https://lazoo.org/wp-content/uploads/2020/02/Jaguar-Female-JEP_6234-1.jpg' },
@@ -10,19 +12,72 @@ const cats = [
   { id: 7, name: 'Tiger', latinName: 'Panthera tigris', image: 'https://images.ctfassets.net/rt5zmd3ipxai/2TtovnO1qnGJyPwtyuVOdU/8ddc745eca71320d2ea1d05679f81cb2/NVA-tiger.jpg?fit=fill&fm=webp&h=578&w=1070&q=72,%20https://images.ctfassets.net/rt5zmd3ipxai/2TtovnO1qnGJyPwtyuVOdU/8ddc745eca71320d2ea1d05679f81cb2/NVA-tiger.jpg?fit=fill&fm=webp&h=1156&w=2140&q=72' },
 ];
 
+
+ //Exercise 4: We set up our state. 'currentCats' holds the data we currently want to show on screen.
 function BigCats() {
+  const [currentCats, setCurrentCats] = useState(initialCats);
+
+// Exercise 4:Sorting Function
+  const handleSortAlphabetically = () => {
+    const sortedCats = [...currentCats].sort((a, b) => a.name.localeCompare(b.name));
+    setCurrentCats(sortedCats);
+  };
+
+// Exercise 4:Reversing Function
+  const handleReverseList = () => {
+    const reversedCats = [...currentCats].reverse();
+    setCurrentCats(reversedCats);
+  };
+
+  // Exercise 4:Filtering Function
+  const handleFilterPanthera = () => {
+    const pantheraCats = initialCats.filter(cat => cat.latinName.includes('Panthera'));
+    setCurrentCats(pantheraCats);
+  };
+
+  // Exercise 4: Reset Function
+  const handleResetList = () => {
+    setCurrentCats(initialCats);
+  };
+
+  // Exercise5: Add and Delete Handlers 
+  const handleAddCat = (newCat) => {
+    setCurrentCats([...currentCats, newCat]);
+  };
+
+  const handleDeleteCat = (idToDelete) => {
+    setCurrentCats(currentCats.filter(cat => cat.id !== idToDelete));
+  };
+
+
+
   return (
     <div className="BigCats">
         <div className="cat-card">
       <h2>Big Cats</h2>
       </div>
+
+      {/* Exercise 5: render and pass it to the handleAddCat function*/}
+      <AddCatForm onAddCat={handleAddCat} />
+
+{/* Exercise 4: Function using onclick */}
+      <div className="cat-controls">
+        <button onClick={handleSortAlphabetically}>Sort A-Z</button>
+        <button onClick={handleReverseList}>Reverse List</button>
+        <button onClick={handleFilterPanthera}>Show Panthera Family</button>
+        <button onClick={handleResetList}>Reset List</button>
+      </div>
+
+
       <ul>
-        {cats.map(cat => (
+        {currentCats.map(cat => (
           <SingleCat 
             key={cat.id} 
+            id={cat.id} // Exercise 5: to pass down id 
             name={cat.name} 
             latinName={cat.latinName} 
             image={cat.image} 
+            onDelete={handleDeleteCat} //Exercise 5: to delete 
           />
         ))}
       </ul>

@@ -18,15 +18,51 @@
 }
 
 
+.BigCats {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* This centers everything horizontally */
+  width: 100%;
+}
+
+/* Styling for the container */
+.single-cat {
+  margin-bottom: 60px;
+  justify-content: center;
+  border: 1px solid #ccc;
+  padding: 25px;
+  list-style: none; 
+}
+
+/* Styling for the image */
+.single-cat {
+  border: 1px solid #ccc;
+  padding: 25px;
+  margin-bottom: 30px;
+  width: max-content;
+}
 
 .cat-card {
   color: #0b0b0b;
   font-size: 50px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   text-align: center;
   margin-bottom: 10px;
+}
+
+.cat-controls {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.add-cat-form {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  margin-bottom: 20px;
 }
 
 

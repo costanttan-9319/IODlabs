@@ -1,10 +1,22 @@
-// this file is used to create image properties for the pictures of the cats
+// Added 'id' to the props list here
+function SingleCat({ id, name, latinName, image, onDelete }) {
 
-function SingleCat({ name, latinName, image }) {
+  
   return (
-    <li className="single-cat" style={{ marginBottom: '60px', border: '1px solid #ccc', padding: '20px', listStyle: 'none' }}>
-      <img src={image} alt={name} width="400" style={{ borderRadius: '8px' }} />
-      <h3>{name}</h3>
+    <li className="single-cat">
+      <img src={image} alt={name} width="400" />
+      
+      <div className="cat-header">
+        <h3>{name}</h3>
+
+        <button 
+          className="delete-link" 
+          onClick={() => onDelete(id)}
+        >
+          (Delete)
+        </button>
+      </div>
+      
       <p><em>Latin Name:</em> {latinName}</p>
     </li>
   );
