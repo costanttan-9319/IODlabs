@@ -1,8 +1,11 @@
 import './App.css'; 
 import Greeting from '../Component/LabExer/Labex1/Greeting';
 import Comment from '../Component/ClassExer/ClassEx1/Comment';
-import BigCats from '../Component/LabExer/Labex2/BigCats';
+import BigCats from '../Component/LabExer/Labex2_,4_&_5/BigCats';
 import Emoji from '../Component/LabExer/Labex3/Emoji';
+import VegeFruitsTable from '../Component/ClassExer/ClassEx2/VegeFruits';
+import Calculator from '../Component/LabExer/Labex6/Calculator';
+
 
 
 function App() {
@@ -57,6 +60,20 @@ function App() {
    <h2>Exercise 3: Emoji App</h2>
       <Emoji/>
  </div>
+
+
+{/* ==== Class Exercise 2: Fruits & Vegetables ===== */}
+      <div>
+        <h2>Class Exercise 2: Searchable Product Table</h2>
+        <VegeFruitsTable />
+      </div>
+
+
+{/* === Lab Exercise 6 Calculator==== */}
+<div>
+  <h2>Lab Exercise 6: Calculator App</h2>
+  <Calculator/>
+</div>
 
 
     </div>
