@@ -18,6 +18,30 @@
   margin: 0;
 }
 
+/* New layout classes for the exercise containers */
+.exercise-container {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px; /* Space between the cards */
+}
+
+.exercise-meta h2 {
+  margin: 0;
+  color: var(--text-h);
+  font-size: 1.2rem;
+}
+
+.exercise-meta p {
+  margin: 0 0 10px 0;
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--text);
+  opacity: 0.8;
+}
+
 /* The Card for the Bitcoin Rates tool */
 .BitcoinRates {
   background: var(--bg);
@@ -26,12 +50,7 @@
   border-radius: 12px;
   padding: 32px;
   width: 100%;
-  max-width: 500px;
-  transition: transform 0.2s ease;
-}
-
-.BitcoinRates:hover {
-  transform: translateY(-4px); /* Subtle lift effect */
+  /* No hover transform here per your request */
 }
 
 /* Styling the dropdown and labels */
@@ -78,6 +97,7 @@
   padding: 4px 12px;
   border-radius: 6px;
   margin-top: 8px;
+  display: inline-block;
 }
 
 /* Footer styling */
