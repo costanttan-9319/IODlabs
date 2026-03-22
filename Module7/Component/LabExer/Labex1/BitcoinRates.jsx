@@ -64,7 +64,7 @@ function BitcoinRates() {
                     Current Price: {btcPrice ? `${btcPrice} ${currency}` : 'Loading...'}
                 </h4>
 
-                <p style={{ marginLeft: '10px', fontSize: '50px' }}>  {/* The emoji happens here */}
+                <p className="emoji-block">
                         {isHappy ? '😆' : '😭'}
                     </p>
 

@@ -111,6 +111,12 @@ footer {
 
 
 /* Style for emoji button */
+
+.emoji-block {
+  margin-block: 50px;
+  font-size: 70px;
+}
+
 .emoji-button {
   background-color: #9b59b6; /* Purple */
   color: white;
