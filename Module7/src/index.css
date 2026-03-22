@@ -56,16 +56,20 @@ body {
 
 /* 4. LAYOUT SYSTEM */
 #root {
-  width: 1126px;
-  max-width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  border-inline: 1px solid var(--border);
+  width: 100%;       /* Now stretches edge-to-edge */
+  margin: 0;         /* No more auto-centering margins */
+  border: none;      /* Kills the side outlines */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
+/* Add this to your Global Reset in Section 3 of index.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 /* 5. TYPOGRAPHY */
 h1, h2, h3 {
   font-family: var(--heading);

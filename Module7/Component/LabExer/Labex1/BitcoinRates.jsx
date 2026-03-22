@@ -1,11 +1,16 @@
 import { useState, useEffect } from "react";
 
+// Import from Labex3 folder
+import { useEmojiContext } from "../Labex3/EmojiContext";
+
 const currencies = ['USD', 'AUD', 'NZD', 'GBP', 'EUR', 'SGD'];
 
 function BitcoinRates() {
     const [currency, setCurrency] = useState(currencies[0]);
     // State to store the fetched price
     const [btcPrice, setBtcPrice] = useState(null);
+    // For the emoji
+    const { isHappy, toggleMood } = useEmojiContext();
 
     useEffect(() => {
         // 1. Create a variable to track if the component is still mounted
@@ -58,6 +63,15 @@ function BitcoinRates() {
                 <h4>
                     Current Price: {btcPrice ? `${btcPrice} ${currency}` : 'Loading...'}
                 </h4>
+
+                <p style={{ marginLeft: '10px', fontSize: '50px' }}>  {/* The emoji happens here */}
+                        {isHappy ? '😆' : '😭'}
+                    </p>
+
+                {/* The button that changes the emoji mood*/}
+                <button onClick={toggleMood} className="emoji-button">
+                    Change Mood from Bitcoin Component
+                </button>
             </div>
         </div>
     );

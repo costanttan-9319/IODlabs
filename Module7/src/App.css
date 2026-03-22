@@ -108,3 +108,95 @@ footer {
   color: var(--text);
   opacity: 0.7;
 }
+
+
+/* Style for emoji button */
+.emoji-button {
+  background-color: #9b59b6; /* Purple */
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  
+  /* This makes the hover and click feel smooth, not jerky */
+  transition: all 0.2s ease;
+  
+  /* Gives it a little lift off the page */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* When you hover: It lifts up and gets brighter */
+.emoji-button:hover {
+  background-color: #a569bd;
+  transform: translateY(-2px); 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* When you CLICK: It "sinks" into the page */
+.emoji-button:active {
+  transform: translateY(1px); 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #8e44ad;
+}
+
+
+
+/* --- Navbar Styling --- */
+.Navbar {
+  background-color: #ffffff; /* Dark elegant blue */
+  width: 100%;
+  padding: 15px 0px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu li a {
+  color: #020202;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.nav-menu li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #9b59b6; /* Your signature purple */
+}
+
+/* THE MAGIC: This styles the link of the page you are currently on */
+.nav-menu li a.active {
+  background-color: #9b59b6;
+  color: white;
+  box-shadow: 0 4px 8px rgba(155, 89, 182, 0.3);
+}
+
+/* --- Layout Spacing --- */
+.page-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.exercise-box {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
