@@ -1,0 +1,153 @@
+/* --- 1. Global Setup & Colors --- */
+:root {
+  --purple: #9b59b6; /* Matches your screenshot's purple */
+  --text-dark: #000000;
+  --text-gray: #888888;
+  --bg-light: #ffffff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures footer stays at the bottom */
+}
+
+/* --- 2. Persistent Header & Footer --- */
+.global-header {
+  text-align: center;
+  padding: 30px 0 10px 0;
+}
+
+.global-header h1 {
+  color: var(--purple);
+  font-size: 3rem;
+  margin: 0;
+  font-weight: 500;
+  letter-spacing: -1px;
+}
+
+.global-footer {
+  text-align: center;
+  padding: 20px;
+  color: var(--text-gray);
+  font-size: 1rem;
+  margin-top: auto; /* Pushes footer to the bottom of the screen */
+}
+
+/* --- 3. Navigation Bar --- */
+.NavBar {
+  background-color: var(--bg-light);
+  padding: 15px 0;
+  border-bottom: 2px solid #f0f0f0; /* Subtle line under the nav */
+}
+
+.NavBar .menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 30px;
+}
+
+.NavBar .menu li a {
+  color: var(--text-dark);
+  text-decoration: none;
+  padding: 10px 20px;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 1.2rem;
+  border-radius: 6px;
+  transition: all 0.2s ease-in-out;
+}
+
+/* The active button style from your screenshot */
+.NavBar .menu li a.active {
+  background-color: var(--purple);
+  color: white;
+  box-shadow: 0 4px 10px rgba(155, 89, 182, 0.4);
+}
+
+/* --- 4. Main Content Area --- */
+.content-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+}
+
+.container {
+  text-align: center;
+  width: 100%;
+}
+
+h2, .container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+/* --- 5. Form Styling (Matching the Screenshot Layout) --- */
+.LoginForm {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-end; /* Aligns the right sides of inputs perfectly */
+  gap: 10px;
+  margin: 0 auto;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.input-group label {
+  font-size: 1.2rem;
+  color: #555;
+  margin-right: 5px;
+}
+
+.input-group input {
+  padding: 5px;
+  border: 1px solid #777;
+  border-radius: 3px;
+  width: 220px;
+  font-size: 1rem;
+}
+
+/* Align the checkbox nicely */
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  color: #555;
+  margin-top: 5px;
+}
+
+button[type="submit"] {
+  background-color: var(--purple);
+  color: white;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  align-self: center; /* Puts the login button in the middle */
+  margin-top: 15px;
+  box-shadow: 0 4px 10px rgba(155, 89, 182, 0.4);
+}
+
+button[type="submit"]:hover {
+  background-color: #8e44ad; /* Slightly darker purple on hover */
+}
