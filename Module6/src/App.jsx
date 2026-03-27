@@ -64,7 +64,7 @@ function App() {
 
 {/* ==== Class Exercise 2: Fruits & Vegetables ===== */}
       <div>
-        <h2>Class Exercise 2: Searchable Product Table</h2>
+        <h2>Class Exercise 2: Availability Table</h2>
         <VegeFruitsTable />
       </div>
 

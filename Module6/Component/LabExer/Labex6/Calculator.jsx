@@ -30,8 +30,8 @@ export default function Calculator() {
   return (
     <div className="calc-card">
       <form onSubmit={handleCalculation}>
-        <div className="calc-group">
-          <label>First Number</label>
+        <div className="num1">
+          <label className="num1-label">First Number</label>
           <input 
             type="number" 
             value={num1} 
@@ -40,8 +40,8 @@ export default function Calculator() {
           />
         </div>
 
-        <div className="calc-group">
-          <label>Operation</label>
+        <div className="calc-operator">
+          <label className="calc-operator-label">Operation</label>
           <select value={operator} onChange={(e) => setOperator(e.target.value)}>
             <option value="add">Addition (+)</option>
             <option value="subtract">Subtraction (-)</option>
@@ -50,8 +50,8 @@ export default function Calculator() {
           </select>
         </div>
 
-        <div className="calc-group">
-          <label>Second Number</label>
+        <div className="num2">
+          <label className="num2-label">Second Number</label>
           <input 
             type="number" 
             value={num2} 

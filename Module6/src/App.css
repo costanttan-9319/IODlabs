@@ -73,5 +73,74 @@ hr {
 }
 
 
-/* For Calculator styling */
 
+
+/* For vege and fruits table */
+.greens-container {
+  margin-bottom: 70px;
+  margin-left: 120px;
+}
+
+
+
+.stock-checkbox input {
+  margin-bottom: 30px;         
+  margin-right: 10px;  
+}
+
+
+
+
+.category-header {
+  text-align: left;
+  padding-top: 15px;
+  font-size: 1.1rem;
+  color: #2e7d32; 
+}
+
+.product-table th {
+  text-align: left;
+  border-bottom: 2px solid #333;
+}
+
+.product-table {
+  width: 200px;
+  border-collapse: collapse;
+}
+
+
+.out-of-stock {
+  color: red;
+  text-decoration: line-through;
+}
+
+
+/* For Calculator styling */
+.num1 {
+  margin-bottom: 20px;
+}
+
+.num1-label {
+  margin-right: 10px;
+}
+
+
+.calc-operator {
+  margin-bottom: 20px;
+}
+
+.calc-operator-label {
+  margin-right: 10px;
+}
+
+.num2 {
+  margin-bottom: 20px;
+}
+
+.num2-label {
+  margin-right: 10px;
+}
+
+.calc-btn {
+  margin-bottom: 7px;
+}
